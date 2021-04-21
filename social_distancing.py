@@ -78,15 +78,15 @@ while True:
 
         fourcc = cv2.VideoWriter_fourcc(*"MJPG")
         if  output_video is None:
-            video_file_name = "./" + str(datetime.now().strftime("%c")) + ".avi"
+            video_file_name = str(datetime.now().strftime("%c")) + ".avi"
             output_video = cv2.VideoWriter(video_file_name, fourcc, 25, (frame.shape[1], frame.shape[0]), True)
 
         if time.time() - start_time > 3600:
-            pvideo_file_name = "./" + str(datetime.now().strftime("%c")) + ".avi"
+            pvideo_file_name = str(datetime.now().strftime("%c")) + ".avi"
             p = Process(pvideo_file_name, "")
             p.start()
             start_time = time.time()
-            video_file_name = "./" + str(datetime.now().strftime("%c")) + ".avi"
+            video_file_name = str(datetime.now().strftime("%c")) + ".avi"
             output_video = cv2.VideoWriter(video_file_name, fourcc, 25,(frame.shape[1], frame.shape[0]), True)
 
         if output_video is not None:
