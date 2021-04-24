@@ -1,0 +1,6 @@
+imutils==0.5.4
+numpy==1.19.5
+opencv-contrib-python==4.5.1.48
+pathlib==1.0.1
+Pyrebase==3.0.27
+tensorflow==2.4.1
