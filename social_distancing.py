@@ -30,7 +30,8 @@ print("[ Loading the TENSORFLOW MODEL ... ]")
 model = Model(model_path)
 print("Done : [ Model loaded and initialized ] ...")
 
-vs = cv2.VideoCapture("./input/pedestrians.mp4")
+vs = cv2.VideoCapture("./input/PETS2009.avi")
+#vs = cv2.VideoCapture("./input/pedestrians.mp4")
 #vs = cv2.VideoCapture(0)
 start_time = time.time()
 output_video  = None
